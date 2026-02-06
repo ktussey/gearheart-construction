@@ -1,0 +1,37 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  text: string;
+  buttonText: string;
+  buttonHref?: string;
+  image?: string;
+}
+
+const {
+  label,
+  title,
+  text,
+  buttonText,
+  buttonHref = '/contact',
+  image = 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80',
+} = Astro.props;
+---
+
+<section class="cta-banner">
+  <div class="cta-banner__bg">
+    <img src={image} alt="Luxury home" />
+    <div class="cta-banner__overlay"></div>
+  </div>
+  <div class="container">
+    <div class="cta-banner__content reveal">
+      <div class="section-label" style="color: var(--gold); justify-content: center;"><span></span>{label}</div>
+      <h2 class="cta-banner__title">{title}</h2>
+      <p class="cta-banner__text">{text}</p>
+      <a href={buttonHref} class="btn btn--primary btn--large">
+        {buttonText}
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,115 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+---
+
+<BaseLayout title="Services — Gearheart Construction" description="Custom home building, renovations, kitchen & bath remodeling, whole-home remodeling, maintenance, and general contracting in Fort Worth, TX.">
+  <Navbar slot="navbar" scrolled={true} />
+
+  <PageHero
+    label="What We Do"
+    title="Our Services"
+    subtitle="Comprehensive construction excellence — from custom builds to ongoing maintenance."
+    image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80"
+    imageAlt="Luxury interior"
+  />
+
+  <!-- Services Detail -->
+  <section class="section">
+    <div class="container">
+
+      <div class="service-detail reveal">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Custom luxury home" class="service-detail__image" />
+        <div class="service-detail__content">
+          <div class="section-label">Custom Homes</div>
+          <h2 class="service-detail__title">Custom Home Building</h2>
+          <p class="service-detail__desc">We build ground-up luxury custom homes in any architectural style your heart desires — from stately English Tudor and classic Georgian to sleek hard-edge contemporary. Every home is a one-of-a-kind creation, designed in collaboration with your chosen architect and built with meticulous attention to every detail. Our team of 35+ trained professionals ensures that your vision is executed with precision from foundation to final finish.</p>
+          <a href="/contact" class="btn btn--primary">
+            Request Consultation
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="service-detail reveal">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Renovation project" class="service-detail__image" />
+        <div class="service-detail__content">
+          <div class="section-label">Renovations</div>
+          <h2 class="service-detail__title">Renovations & Additions</h2>
+          <p class="service-detail__desc">Our renovations are so seamless that inspectors can't tell where the original structure ends and the new construction begins. Whether you're adding a wing, expanding a living area, or reconfiguring your floorplan, we honor the character of your existing home while bringing it into the future. Our long-standing relationships with craftsmen and suppliers ensure materials and finishes that match perfectly.</p>
+          <a href="/contact" class="btn btn--primary">
+            Request Consultation
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="service-detail reveal">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Luxury kitchen remodel" class="service-detail__image" />
+        <div class="service-detail__content">
+          <div class="section-label">Kitchen & Bath</div>
+          <h2 class="service-detail__title">Kitchen & Bathroom Remodeling</h2>
+          <p class="service-detail__desc">Transform the heart of your home with high-end kitchen and bathroom remodeling. We work with premium materials — natural stone, custom cabinetry, designer fixtures, and exquisite finishes — to create spaces that are both beautiful and functional. From layout optimization to the final hardware selection, every decision is guided by quality and your personal style.</p>
+          <a href="/contact" class="btn btn--primary">
+            Request Consultation
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="service-detail reveal">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="Whole home remodel" class="service-detail__image" />
+        <div class="service-detail__content">
+          <div class="section-label">Remodeling</div>
+          <h2 class="service-detail__title">Whole-Home Remodeling</h2>
+          <p class="service-detail__desc">When your home needs a complete transformation, our whole-home remodeling service reimagines every aspect of your living space. We handle complete interior and exterior remodels — updating systems, reconfiguring layouts, refreshing finishes, and modernizing your home while preserving its character. The result is a home that feels entirely new yet unmistakably yours.</p>
+          <a href="/contact" class="btn btn--primary">
+            Request Consultation
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="service-detail reveal">
+        <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80" alt="Home maintenance" class="service-detail__image" />
+        <div class="service-detail__content">
+          <div class="section-label">Maintenance</div>
+          <h2 class="service-detail__title">Home Maintenance</h2>
+          <p class="service-detail__desc">Through Gearheart Maintenance Company, we offer ongoing maintenance services to keep your home in pristine condition long after construction is complete. Our maintenance team handles carpentry, repairs, seasonal upkeep, and everything in between. This dedicated service ensures that the quality and beauty of your Gearheart home endures for generations.</p>
+          <a href="/contact" class="btn btn--primary">
+            Request Consultation
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="service-detail reveal">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80" alt="General contracting" class="service-detail__image" />
+        <div class="service-detail__content">
+          <div class="section-label">General Contracting</div>
+          <h2 class="service-detail__title">General Contracting</h2>
+          <p class="service-detail__desc">As your general contractor, we serve as the single point of accountability for your entire project. We coordinate with architects, engineers, interior designers, and our trusted network of subcontractors to deliver your project on schedule and to the highest standards. Our full-service project management approach means you have one team responsible for every aspect of construction.</p>
+          <a href="/contact" class="btn btn--primary">
+            Request Consultation
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <CtaBanner
+    label="Ready to Build?"
+    title="Let's Discuss Your Project"
+    text="Every great project begins with a conversation. Tell us about your vision and we'll craft a plan to bring it to life."
+    buttonText="Contact Us"
+  />
+
+  <Footer slot="footer" />
+</BaseLayout>
