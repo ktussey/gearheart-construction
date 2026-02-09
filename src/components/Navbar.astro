@@ -1,0 +1,41 @@
+---
+interface Props {
+  scrolled?: boolean;
+}
+
+const { scrolled = false } = Astro.props;
+const pathname = Astro.url.pathname;
+
+const links = [
+  { href: '/services', label: 'Services' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/about', label: 'About' },
+];
+
+function isActive(href: string): boolean {
+  return pathname === href || pathname.startsWith(href + '/');
+}
+---
+
+<nav class={`navbar${scrolled ? ' scrolled' : ''}`}>
+  <div class="container">
+    <a href="/" class="navbar__logo">
+      Gearheart
+      <span>Construction</span>
+    </a>
+    <div class="navbar__links">
+      {links.map((link) => (
+        <a href={link.href} class={`navbar__link${isActive(link.href) ? ' active' : ''}`}>
+          {link.label}
+        </a>
+      ))}
+      <span class="navbar__link-separator">|</span>
+      <a href="/contact" class={`navbar__link${isActive('/contact') ? ' active' : ''}`}>Contact Us</a>
+    </div>
+    <button class="navbar__toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>

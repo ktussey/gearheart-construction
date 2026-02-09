@@ -1,0 +1,356 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<BaseLayout title="Gearheart Construction — Fort Worth's Premier Home Builder" description="Gearheart Construction has built and renovated fine residences across Fort Worth for over 40 years. Custom homes, renovations, and luxury remodeling.">
+  <Navbar slot="navbar" />
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="/images/hero.png" alt="Luxury custom home by Gearheart Construction" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__bottom">
+      <div class="hero__text">
+        <p class="hero__headline">
+          Building fine residences in <br /> Fort Worth for over 40 years.
+        </p>
+        <a href="/contact" class="btn btn--primary btn--rounded">Contact Us</a>
+      </div>
+      <div class="hero__scroll">
+        <div class="hero__scroll-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </div>
+      </div>
+      <div class="hero__tags">
+        <span class="hero__tag">Custom Homes</span>
+        <span class="hero__tag">Renovations</span>
+        <span class="hero__tag">Remodeling</span>
+        <span class="hero__tag">Maintenance</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview Section -->
+  <section class="section">
+    <div class="container">
+      <div class="about-preview">
+        <div class="about-preview__images reveal">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Gearheart luxury home project" class="about-preview__img-main" />
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Custom home interior" class="about-preview__img-secondary" />
+        </div>
+        <div class="about-preview__text reveal">
+          <div class="section-label">About Gearheart</div>
+          <h2 class="section-title">A Legacy of Craftsmanship in Fort Worth</h2>
+          <p>Founded by Joe Gearheart, our firm has been building and renovating fine residences across Fort Worth for over four decades. We bring together a team of 35+ trained professionals who share our unwavering commitment to quality.</p>
+          <p style="margin-top: 16px;">Ranked in the top 11% of over 222,000 licensed contractors in Texas, we collaborate closely with architects, engineers, and designers to bring exceptional visions to life.</p>
+          <div class="about-preview__stats">
+            <div class="stat">
+              <div class="stat__number">40+</div>
+              <div class="stat__label">Years of Experience</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number">35+</div>
+              <div class="stat__label">Trained Professionals</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number">11%</div>
+              <div class="stat__label">Top Texas Contractors</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number">70+</div>
+              <div class="stat__label">Permitted Projects</div>
+            </div>
+          </div>
+          <a href="/about" class="btn btn--dark" style="margin-top: 40px;">
+            Our Story
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <div class="section-label" style="justify-content: center;">
+          <span></span>Our Services
+        </div>
+        <h2 class="section-title">Comprehensive Construction Excellence</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">From ground-up custom builds to seamless renovations, we deliver unparalleled quality at every scale.</p>
+      </div>
+      <div class="services-grid reveal-stagger">
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 7.5h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Custom Home Building</h3>
+          <p class="service-card__desc">Ground-up luxury custom homes in any architectural style — from English Tudor to hard-edge contemporary.</p>
+          <a href="/services" class="service-card__link">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.04 3.04a1 1 0 01-1.46-1.06l.96-5.61L1.7 7.52a1 1 0 01.56-1.7l5.63-.82L10.4.7a1 1 0 011.8 0l2.51 5.1 5.63.82a1 1 0 01.56 1.7l-4.08 3.97.96 5.61a1 1 0 01-1.46 1.06l-5.04-3.04z" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Renovations & Additions</h3>
+          <p class="service-card__desc">Seamless renovations where new construction is indistinguishable from the original structure.</p>
+          <a href="/services" class="service-card__link">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Kitchen & Bath Remodeling</h3>
+          <p class="service-card__desc">High-end transformations with premium materials, custom cabinetry, and exquisite finishes.</p>
+          <a href="/services" class="service-card__link">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Whole-Home Remodeling</h3>
+          <p class="service-card__desc">Complete interior and exterior remodels that reimagine your living spaces entirely.</p>
+          <a href="/services" class="service-card__link">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.04 3.04a1 1 0 01-1.46-1.06l.96-5.61L1.7 7.52a1 1 0 01.56-1.7l5.63-.82L10.4.7a1 1 0 011.8 0l2.51 5.1 5.63.82a1 1 0 01.56 1.7l-4.08 3.97.96 5.61a1 1 0 01-1.46 1.06l-5.04-3.04z" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Home Maintenance</h3>
+          <p class="service-card__desc">Ongoing maintenance through Gearheart Maintenance Company — carpentry, repairs, and upkeep.</p>
+          <a href="/services" class="service-card__link">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15a2.25 2.25 0 012.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">General Contracting</h3>
+          <p class="service-card__desc">Full-service project management working alongside architects, engineers, and interior designers.</p>
+          <a href="/services" class="service-card__link">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px;">
+        <div>
+          <div class="section-label">Featured Projects</div>
+          <h2 class="section-title">Our Portfolio</h2>
+          <p class="section-subtitle">A selection of our finest residential projects across Fort Worth.</p>
+        </div>
+        <a href="/projects" class="btn btn--outline">View All Projects</a>
+      </div>
+      <div class="projects-grid reveal-stagger">
+        <ProjectCard href="/projects/westover-hills-estate" image="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80" imageAlt="Westover Hills Estate" projectType="Custom Home" title="Westover Hills Estate" featured={true} />
+        <ProjectCard href="/projects/rivercrest-manor-renovation" image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" imageAlt="Rivercrest Manor Renovation" projectType="Renovation" title="Rivercrest Manor Renovation" />
+        <ProjectCard href="/projects/colonial-kitchen-transformation" image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" imageAlt="Colonial Kitchen Transformation" projectType="Kitchen Remodel" title="Colonial Kitchen Transformation" />
+        <ProjectCard href="/projects/tanglewood-contemporary" image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" imageAlt="Tanglewood Contemporary" projectType="Custom Home" title="Tanglewood Contemporary" />
+        <ProjectCard href="/projects/monticello-addition" image="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80" imageAlt="Monticello Addition" projectType="Addition" title="Monticello Addition" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <div class="section-label" style="justify-content: center;">
+          <span></span>Testimonials
+        </div>
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">The relationships we build are as enduring as the homes we construct.</p>
+      </div>
+      <div class="testimonials-slider reveal-stagger">
+        <div class="testimonial-card">
+          <p class="testimonial-card__quote">Gearheart transformed our vision into a home that exceeded every expectation. Their attention to detail and commitment to quality is unmatched in Fort Worth.</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__author-line"></div>
+            <div class="testimonial-card__author-info">
+              <span class="testimonial-card__name">Fort Worth Homeowner</span>
+              <span class="testimonial-card__role">Custom Home Client</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-card__quote">The inspector couldn't tell where the original house ended and the addition began. That's the Gearheart standard — absolutely seamless craftsmanship.</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__author-line"></div>
+            <div class="testimonial-card__author-info">
+              <span class="testimonial-card__name">Renovation Client</span>
+              <span class="testimonial-card__role">Whole-Home Renovation</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-card__quote">We've trusted Gearheart with three projects over the past twenty years. Their integrity and craftsmanship have never wavered. They are simply the best.</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__author-line"></div>
+            <div class="testimonial-card__author-info">
+              <span class="testimonial-card__name">Long-Term Client</span>
+              <span class="testimonial-card__role">Multiple Projects</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-card__quote">From initial concept through final walkthrough, the Gearheart team communicated with transparency and delivered beyond what we imagined possible.</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__author-line"></div>
+            <div class="testimonial-card__author-info">
+              <span class="testimonial-card__name">Westover Hills Resident</span>
+              <span class="testimonial-card__role">New Construction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto 60px;">
+        <div class="section-label" style="justify-content: center;">
+          <span></span>Get in Touch
+        </div>
+        <h2 class="section-title">Start Your Project</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Tell us about your vision and we'll craft a plan to bring it to life.</p>
+      </div>
+      <div class="contact-layout reveal">
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(817) 555-0123" />
+            </div>
+            <div class="form-group">
+              <label for="project-type">Project Type</label>
+              <select id="project-type" name="project-type">
+                <option value="" disabled selected>Select a project type</option>
+                <option value="new-build">New Build</option>
+                <option value="renovation">Renovation</option>
+                <option value="remodel">Remodel</option>
+                <option value="maintenance">Maintenance</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--large">
+            Send Message
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+        </form>
+        <div class="contact-info">
+          <div class="contact-info__item">
+            <div class="contact-info__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+            </div>
+            <div>
+              <div class="contact-info__label">Office Address</div>
+              <div class="contact-info__text">3001 Cullen St<br />Fort Worth, TX 76107</div>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+              </svg>
+            </div>
+            <div>
+              <div class="contact-info__label">Phone</div>
+              <div class="contact-info__text"><a href="tel:8177378935">(817) 737-8935</a></div>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <div class="contact-info__label">Business Hours</div>
+              <div class="contact-info__text">Monday – Friday<br />8:00 AM – 5:00 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

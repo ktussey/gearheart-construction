@@ -1,0 +1,165 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+---
+
+<BaseLayout title="About — Gearheart Construction" description="Learn about Gearheart Construction's 40+ year legacy of building fine residences in Fort Worth, Texas.">
+  <Navbar slot="navbar" scrolled={true} />
+
+  <PageHero
+    label="Our Story"
+    title="About Gearheart Construction"
+    subtitle="Four decades of building Fort Worth's finest residences with uncompromising quality and enduring relationships."
+    image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
+    imageAlt="Gearheart Construction project"
+  />
+
+  <!-- Company History -->
+  <section class="section">
+    <div class="container">
+      <div class="about-preview">
+        <div class="about-preview__images reveal">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Gearheart craftsmanship" class="about-preview__img-main" />
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt="Fine home detail" class="about-preview__img-secondary" />
+        </div>
+        <div class="about-preview__text reveal">
+          <div class="section-label">Our Legacy</div>
+          <h2 class="section-title">Over 40 Years of Building Excellence</h2>
+          <p>Founded by Joe Gearheart, Gearheart Construction has been the cornerstone of luxury residential construction in Fort Worth for over four decades. What began as a commitment to exceptional craftsmanship has grown into one of the most respected construction firms in Texas.</p>
+          <p style="margin-top: 16px;">Our collaborative approach sets us apart. We work hand-in-hand with architects, engineers, and interior designers to ensure every project reflects our clients' vision while meeting the highest standards of construction quality. This collaborative spirit extends to our long-term relationships with subcontractors and suppliers — partnerships built on mutual respect and shared commitment to excellence.</p>
+          <p style="margin-top: 16px;">Many of our clients have been with us since the firm's founding, entrusting us with multiple projects over the decades. These enduring relationships are a testament to the trust and satisfaction that define every Gearheart project.</p>
+          <div class="about-preview__stats">
+            <div class="stat">
+              <div class="stat__number">40+</div>
+              <div class="stat__label">Years of Experience</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number">35+</div>
+              <div class="stat__label">Trained Professionals</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number">11%</div>
+              <div class="stat__label">Top Texas Contractors</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number">70+</div>
+              <div class="stat__label">Permitted Projects</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <div class="section-label" style="justify-content: center;">
+          <span></span>Our Values
+        </div>
+        <h2 class="section-title">What Guides Us</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">The principles that have sustained our reputation for over four decades.</p>
+      </div>
+      <div class="values-grid reveal-stagger">
+        <div class="value-card">
+          <div class="value-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.42 15.17l-5.04 3.04a1 1 0 01-1.46-1.06l.96-5.61L1.7 7.52a1 1 0 01.56-1.7l5.63-.82L10.4.7a1 1 0 011.8 0l2.51 5.1 5.63.82a1 1 0 01.56 1.7l-4.08 3.97.96 5.61a1 1 0 01-1.46 1.06l-5.04-3.04z"/></svg>
+          </div>
+          <h3 class="value-card__title">Craftsmanship</h3>
+          <p class="value-card__desc">Every joint, every finish, every detail is executed with the precision and care that defines true craftsmanship.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="value-card__title">Attention to Detail</h3>
+          <p class="value-card__desc">The difference between good and exceptional lies in the details. We obsess over every element of your project.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+          </div>
+          <h3 class="value-card__title">Client Relationships</h3>
+          <p class="value-card__desc">Our clients become our partners. Many relationships span decades and multiple projects built on trust.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>
+          </div>
+          <h3 class="value-card__title">Standards of Excellence</h3>
+          <p class="value-card__desc">Ranked in the top 11% of Texas contractors, our standards are the benchmark for residential construction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <div class="section-label" style="justify-content: center;">
+          <span></span>Our Team
+        </div>
+        <h2 class="section-title">The People Behind the Craft</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">A team of 35+ trained professionals dedicated to building Fort Worth's finest homes.</p>
+      </div>
+      <div class="team-grid reveal-stagger">
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" alt="Joe Gearheart" class="team-card__image" />
+          <h4 class="team-card__name">Joe Gearheart</h4>
+          <p class="team-card__role">Founder & President</p>
+        </div>
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="Michael Torres" class="team-card__image" />
+          <h4 class="team-card__name">Michael Torres</h4>
+          <p class="team-card__role">Vice President</p>
+        </div>
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Sarah Mitchell" class="team-card__image" />
+          <h4 class="team-card__name">Sarah Mitchell</h4>
+          <p class="team-card__role">Project Manager</p>
+        </div>
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="David Chen" class="team-card__image" />
+          <h4 class="team-card__name">David Chen</h4>
+          <p class="team-card__role">Lead Superintendent</p>
+        </div>
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" alt="Amanda Rivera" class="team-card__image" />
+          <h4 class="team-card__name">Amanda Rivera</h4>
+          <p class="team-card__role">Design Coordinator</p>
+        </div>
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" alt="Robert Hayes" class="team-card__image" />
+          <h4 class="team-card__name">Robert Hayes</h4>
+          <p class="team-card__role">Estimator</p>
+        </div>
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" alt="Jennifer Walsh" class="team-card__image" />
+          <h4 class="team-card__name">Jennifer Walsh</h4>
+          <p class="team-card__role">Office Manager</p>
+        </div>
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" alt="Mark Thompson" class="team-card__image" />
+          <h4 class="team-card__name">Mark Thompson</h4>
+          <p class="team-card__role">Field Supervisor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner
+    label="Ready to Build?"
+    title="Let's Create Something Extraordinary"
+    text="Whether you're envisioning a new custom home or transforming your existing residence, we're here to make it happen."
+    buttonText="Start Your Project"
+  />
+
+  <Footer slot="footer" />
+</BaseLayout>

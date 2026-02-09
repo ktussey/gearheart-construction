@@ -1,0 +1,20 @@
+---
+interface Props {
+  href: string;
+  image: string;
+  imageAlt: string;
+  projectType: string;
+  title: string;
+  featured?: boolean;
+}
+
+const { href, image, imageAlt, projectType, title, featured = false } = Astro.props;
+---
+
+<a href={href} class={`project-card${featured ? ' project-card--featured' : ''}`}>
+  <img src={image} alt={imageAlt} class="project-card__image" />
+  <div class="project-card__overlay">
+    <div class="project-card__type">{projectType}</div>
+    <h3 class="project-card__title">{title}</h3>
+  </div>
+</a>

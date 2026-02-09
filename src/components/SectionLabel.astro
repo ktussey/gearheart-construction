@@ -1,0 +1,15 @@
+---
+interface Props {
+  centered?: boolean;
+  gold?: boolean;
+}
+
+const { centered = false, gold = false } = Astro.props;
+---
+
+<div
+  class="section-label"
+  style={`${centered ? 'justify-content: center;' : ''}${gold ? 'color: var(--gold);' : ''}`}
+>
+  <span></span><slot />
+</div>

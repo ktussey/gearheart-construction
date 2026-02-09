@@ -1,0 +1,96 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import PageHero from '../../components/PageHero.astro';
+import Lightbox from '../../components/Lightbox.astro';
+import { getAllProjects, getProjectBySlug } from '../../lib/projects';
+
+export async function getStaticPaths() {
+  const projects = await getAllProjects();
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const project = await getProjectBySlug(slug!);
+
+if (!project) {
+  return Astro.redirect('/projects');
+}
+---
+
+<BaseLayout title={`${project.title} — Gearheart Construction`} description={`${project.title} — a ${project.projectType.toLowerCase()} project by Gearheart Construction in Fort Worth, Texas.`}>
+  <Navbar slot="navbar" scrolled={true} />
+
+  <PageHero
+    label={project.projectType}
+    title={project.title}
+    subtitle={project.subtitle}
+    image={project.heroImage}
+    imageAlt={project.title}
+    minHeight="60vh"
+  />
+
+  <!-- Project Detail -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal">
+        <!-- Project Meta -->
+        <div class="project-detail__meta">
+          <div class="project-detail__meta-item">
+            <span class="project-detail__meta-label">Project Type</span>
+            <span class="project-detail__meta-value">{project.projectType}</span>
+          </div>
+          <div class="project-detail__meta-item">
+            <span class="project-detail__meta-label">Location</span>
+            <span class="project-detail__meta-value">{project.location}</span>
+          </div>
+          <div class="project-detail__meta-item">
+            <span class="project-detail__meta-label">Style</span>
+            <span class="project-detail__meta-value">{project.style}</span>
+          </div>
+          <div class="project-detail__meta-item">
+            <span class="project-detail__meta-label">Completed</span>
+            <span class="project-detail__meta-value">{project.completedYear}</span>
+          </div>
+        </div>
+
+        <!-- Project Description -->
+        <div style="max-width: 800px;">
+          <h2 style="margin-bottom: 24px;">About This Project</h2>
+          {project.description.map((paragraph, i) => (
+            <p style={i > 0 ? 'margin-top: 16px;' : undefined}>{paragraph}</p>
+          ))}
+        </div>
+
+        <!-- Image Gallery -->
+        <div class="project-gallery">
+          {project.gallery.map((img, i) => (
+            <img src={img} alt={`${project.title} - image ${i + 1}`} />
+          ))}
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="reveal" style="text-align: center; padding-top: 40px; border-top: 1px solid var(--border);">
+        <h3 style="margin-bottom: 16px;">Interested in a Similar Project?</h3>
+        <p style="max-width: 500px; margin: 0 auto 32px;">Let's discuss how we can create something exceptional for you.</p>
+        <a href="/contact" class="btn btn--primary btn--large">
+          Contact Us About Your Project
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <div style="margin-top: 16px;">
+          <a href="/projects" class="btn btn--outline">Back to All Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Lightbox />
+
+  <Footer slot="footer" />
+</BaseLayout>

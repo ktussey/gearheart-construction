@@ -1,0 +1,52 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import PageHero from '../../components/PageHero.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import { getAllProjects } from '../../lib/projects';
+
+const projects = await getAllProjects();
+---
+
+<BaseLayout title="Projects — Gearheart Construction" description="Browse our portfolio of luxury custom homes, renovations, and remodeling projects across Fort Worth, Texas.">
+  <Navbar slot="navbar" scrolled={true} />
+
+  <PageHero
+    label="Portfolio"
+    title="Our Projects"
+    subtitle="A curated selection of Fort Worth's finest residential construction and renovation projects."
+    image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80"
+    imageAlt="Gearheart projects"
+  />
+
+  <!-- Projects Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="projects-grid reveal-stagger">
+        {projects.map((project, i) => (
+          <ProjectCard
+            href={`/projects/${project.slug}`}
+            image={project.cardImage}
+            imageAlt={project.title}
+            projectType={project.projectType}
+            title={project.title}
+            featured={i === 0}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner
+    label="Your Vision, Our Craft"
+    title="Ready to Start Your Project?"
+    text="Let's discuss how we can bring your vision to life with the same quality and craftsmanship showcased in our portfolio."
+    buttonText="Contact Us"
+  />
+
+  <Footer slot="footer" />
+</BaseLayout>
