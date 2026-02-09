@@ -8,7 +8,8 @@
       "Bash(lsof:*)",
       "Bash(xargs kill:*)",
       "Bash(bun install)",
-      "Bash(bun run build:*)"
+      "Bash(bun run build:*)",
+      "Bash(sips -g pixelWidth -g pixelHeight public/images/hero.png)"
     ]
   }
 }

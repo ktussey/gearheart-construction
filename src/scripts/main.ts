@@ -117,12 +117,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Parallax on hero (subtle) ---
   const heroBg = document.querySelector('.hero__bg img') as HTMLElement | null;
   if (heroBg) {
-    window.addEventListener('scroll', () => {
+    const updateParallax = () => {
       const scrolled = window.scrollY;
       if (scrolled < window.innerHeight) {
-        heroBg.style.transform = `translateY(${scrolled * 0.3}px) scale(1.1)`;
+        heroBg.style.transform = `translateY(${scrolled * 0.3}px)`;
       }
-    }, { passive: true });
+    };
+    updateParallax();
+    window.addEventListener('scroll', updateParallax, { passive: true });
   }
 
   // --- Counter animation for stats ---
