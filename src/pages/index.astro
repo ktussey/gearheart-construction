@@ -5,6 +5,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import { getFeaturedProjects } from '../lib/projects';
+
+const featuredProjects = await getFeaturedProjects();
 ---
 
 <BaseLayout title="Gearheart Construction — Fort Worth's Premier Home Builder" description="Gearheart Construction has built and renovated fine residences across Fort Worth for over 40 years. Custom homes, renovations, and luxury remodeling.">
@@ -197,13 +200,24 @@ import ProjectCard from '../components/ProjectCard.astro';
         </div>
         <a href="/projects" class="btn btn--outline">View All Projects</a>
       </div>
-      <div class="projects-grid reveal-stagger">
-        <ProjectCard href="/projects/westover-hills-estate" image="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80" imageAlt="Westover Hills Estate" projectType="Custom Home" title="Westover Hills Estate" featured={true} />
-        <ProjectCard href="/projects/rivercrest-manor-renovation" image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" imageAlt="Rivercrest Manor Renovation" projectType="Renovation" title="Rivercrest Manor Renovation" />
-        <ProjectCard href="/projects/colonial-kitchen-transformation" image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" imageAlt="Colonial Kitchen Transformation" projectType="Kitchen Remodel" title="Colonial Kitchen Transformation" />
-        <ProjectCard href="/projects/tanglewood-contemporary" image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" imageAlt="Tanglewood Contemporary" projectType="Custom Home" title="Tanglewood Contemporary" />
-        <ProjectCard href="/projects/monticello-addition" image="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80" imageAlt="Monticello Addition" projectType="Addition" title="Monticello Addition" />
-      </div>
+      {featuredProjects.length > 0 ? (
+        <div class="projects-grid reveal-stagger">
+          {featuredProjects.map((project, i) => (
+            <ProjectCard
+              href={`/projects/${project.slug}`}
+              image={project.cardImage}
+              imageAlt={project.title}
+              projectType={project.projectType}
+              title={project.title}
+              featured={i === 0}
+            />
+          ))}
+        </div>
+      ) : (
+        <div class="reveal" style="text-align: center; padding: 80px 0;">
+          <p style="font-size: 1.125rem; color: var(--text-light);">Projects coming soon. Check back shortly.</p>
+        </div>
+      )}
     </div>
   </section>
 

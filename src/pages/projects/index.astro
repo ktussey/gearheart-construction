@@ -26,18 +26,24 @@ const projects = await getAllProjects();
   <!-- Projects Gallery -->
   <section class="section">
     <div class="container">
-      <div class="projects-grid reveal-stagger">
-        {projects.map((project, i) => (
-          <ProjectCard
-            href={`/projects/${project.slug}`}
-            image={project.cardImage}
-            imageAlt={project.title}
-            projectType={project.projectType}
-            title={project.title}
-            featured={i === 0}
-          />
-        ))}
-      </div>
+      {projects.length > 0 ? (
+        <div class="projects-grid reveal-stagger">
+          {projects.map((project, i) => (
+            <ProjectCard
+              href={`/projects/${project.slug}`}
+              image={project.cardImage}
+              imageAlt={project.title}
+              projectType={project.projectType}
+              title={project.title}
+              featured={i === 0}
+            />
+          ))}
+        </div>
+      ) : (
+        <div class="reveal" style="text-align: center; padding: 80px 0;">
+          <p style="font-size: 1.125rem; color: var(--text-light);">No projects yet. Check back soon.</p>
+        </div>
+      )}
     </div>
   </section>
 
