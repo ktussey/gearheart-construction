@@ -5,11 +5,13 @@ import sanity from '@sanity/astro';
 import react from '@astrojs/react';
 import node from '@astrojs/node';
 
+import netlify from '@astrojs/netlify';
+
 const env = loadEnv(process.env.NODE_ENV || '', process.cwd(), 'SANITY');
 
 export default defineConfig({
   output: 'server',
-  adapter: node({ mode: 'standalone' }),
+  adapter: netlify(),
   env: {
     schema: {
       SANITY_PROJECT_ID: { type: 'string', context: 'server', access: 'public' },
