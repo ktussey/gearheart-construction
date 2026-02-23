@@ -1,11 +1,17 @@
 ---
 export const prerender = true;
 
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBanner from '../components/CtaBanner.astro';
+
+import gcPhoto1 from '../assets/gc-photo-1.jpg';
+import gcPhoto2 from '../assets/gc-photo-2.jpg';
+import gcPhoto3 from '../assets/gc-photo-3.jpg';
+import gcPhoto4 from '../assets/gc-photo-4.jpg';
 ---
 
 <BaseLayout title="Services — Gearheart Construction" description="Custom home building, renovations, kitchen & bath remodeling, whole-home remodeling, maintenance, and general contracting in Fort Worth, TX.">
@@ -15,7 +21,7 @@ import CtaBanner from '../components/CtaBanner.astro';
     label="What We Do"
     title="Our Services"
     subtitle="Comprehensive construction excellence — from custom builds to ongoing maintenance."
-    image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80"
+    image={gcPhoto1}
     imageAlt="Luxury interior"
   />
 
@@ -24,7 +30,7 @@ import CtaBanner from '../components/CtaBanner.astro';
     <div class="container">
 
       <div class="service-detail reveal">
-        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Custom luxury home" class="service-detail__image" />
+        <Image src={gcPhoto4} alt="Custom luxury home" class="service-detail__image" width={800} quality={80} loading="lazy" />
         <div class="service-detail__content">
           <div class="section-label">Custom Homes</div>
           <h2 class="service-detail__title">Custom Home Building</h2>
@@ -37,7 +43,7 @@ import CtaBanner from '../components/CtaBanner.astro';
       </div>
 
       <div class="service-detail reveal">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Renovation project" class="service-detail__image" />
+        <Image src={gcPhoto2} alt="Renovation project" class="service-detail__image" width={800} quality={80} loading="lazy" />
         <div class="service-detail__content">
           <div class="section-label">Renovations</div>
           <h2 class="service-detail__title">Renovations & Additions</h2>
@@ -50,7 +56,7 @@ import CtaBanner from '../components/CtaBanner.astro';
       </div>
 
       <div class="service-detail reveal">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Luxury kitchen remodel" class="service-detail__image" />
+        <Image src={gcPhoto3} alt="Luxury kitchen remodel" class="service-detail__image" width={800} quality={80} loading="lazy" />
         <div class="service-detail__content">
           <div class="section-label">Kitchen & Bath</div>
           <h2 class="service-detail__title">Kitchen & Bathroom Remodeling</h2>
@@ -63,7 +69,7 @@ import CtaBanner from '../components/CtaBanner.astro';
       </div>
 
       <div class="service-detail reveal">
-        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="Whole home remodel" class="service-detail__image" />
+        <Image src={gcPhoto1} alt="Whole home remodel" class="service-detail__image" width={800} quality={80} loading="lazy" />
         <div class="service-detail__content">
           <div class="section-label">Remodeling</div>
           <h2 class="service-detail__title">Whole-Home Remodeling</h2>
@@ -76,7 +82,7 @@ import CtaBanner from '../components/CtaBanner.astro';
       </div>
 
       <div class="service-detail reveal">
-        <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80" alt="Home maintenance" class="service-detail__image" />
+        <Image src={gcPhoto2} alt="Home maintenance" class="service-detail__image" width={800} quality={80} loading="lazy" />
         <div class="service-detail__content">
           <div class="section-label">Maintenance</div>
           <h2 class="service-detail__title">Home Maintenance</h2>
@@ -89,7 +95,7 @@ import CtaBanner from '../components/CtaBanner.astro';
       </div>
 
       <div class="service-detail reveal">
-        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80" alt="General contracting" class="service-detail__image" />
+        <Image src={gcPhoto4} alt="General contracting" class="service-detail__image" width={800} quality={80} loading="lazy" />
         <div class="service-detail__content">
           <div class="section-label">General Contracting</div>
           <h2 class="service-detail__title">General Contracting</h2>

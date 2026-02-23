@@ -9,6 +9,8 @@ import ProjectCard from '../../components/ProjectCard.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
 import { getAllProjects } from '../../lib/projects';
 
+import gcPhoto3 from '../../assets/gc-photo-3.jpg';
+
 const projects = await getAllProjects();
 ---
 
@@ -19,7 +21,7 @@ const projects = await getAllProjects();
     label="Portfolio"
     title="Our Projects"
     subtitle="A curated selection of Fort Worth's finest residential construction and renovation projects."
-    image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80"
+    image={gcPhoto3}
     imageAlt="Gearheart projects"
   />
 

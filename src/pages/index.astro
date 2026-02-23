@@ -1,11 +1,16 @@
 ---
 export const prerender = true;
 
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import { getFeaturedProjects } from '../lib/projects';
+
+import gcPhoto1 from '../assets/gc-photo-1.jpg';
+import gcPhoto3 from '../assets/gc-photo-3.jpg';
+import gcPhoto4 from '../assets/gc-photo-4.jpg';
 
 const featuredProjects = await getFeaturedProjects();
 ---
@@ -17,6 +22,7 @@ const featuredProjects = await getFeaturedProjects();
   <section class="hero">
     <div class="hero__bg">
       <img src="/images/hero.png" alt="Luxury custom home by Gearheart Construction" />
+      <!-- <Image src={gcPhoto1} alt="Luxury custom home by Gearheart Construction" width={1920} quality={80} loading="lazy" /> -->
       <div class="hero__overlay"></div>
     </div>
     <div class="hero__bottom">
@@ -47,8 +53,8 @@ const featuredProjects = await getFeaturedProjects();
     <div class="container">
       <div class="about-preview">
         <div class="about-preview__images reveal">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Gearheart luxury home project" class="about-preview__img-main" />
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Custom home interior" class="about-preview__img-secondary" />
+          <Image src={gcPhoto4} alt="Gearheart luxury home project" class="about-preview__img-main" width={800} quality={80} loading="lazy" />
+          <Image src={gcPhoto3} alt="Custom home interior" class="about-preview__img-secondary" width={400} quality={80} loading="lazy" />
         </div>
         <div class="about-preview__text reveal">
           <div class="section-label">About Gearheart</div>
@@ -222,7 +228,7 @@ const featuredProjects = await getFeaturedProjects();
   </section>
 
   <!-- Testimonials Section -->
-  <section class="section section--dark">
+  <!-- <section class="section section--dark">
     <div class="container">
       <div class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto;">
         <div class="section-label" style="justify-content: center;">
@@ -274,7 +280,7 @@ const featuredProjects = await getFeaturedProjects();
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Contact Section -->
   <section class="section" id="contact">
@@ -358,7 +364,7 @@ const featuredProjects = await getFeaturedProjects();
             </div>
             <div>
               <div class="contact-info__label">Business Hours</div>
-              <div class="contact-info__text">Monday – Friday<br />8:00 AM – 5:00 PM</div>
+              <div class="contact-info__text">Monday – Friday<br />8:00 AM – 4:00 PM</div>
             </div>
           </div>
         </div>

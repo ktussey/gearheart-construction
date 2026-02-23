@@ -10,7 +10,8 @@
       "Bash(bun install)",
       "Bash(bun run build:*)",
       "Bash(sips -g pixelWidth -g pixelHeight public/images/hero.png)",
-      "Bash(bun add:*)"
+      "Bash(bun add:*)",
+      "Bash(ls:*)"
     ]
   }
 }
