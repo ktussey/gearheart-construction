@@ -1,9 +1,12 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 interface Props {
   label: string;
   title: string;
   subtitle: string;
-  image: string;
+  image: ImageMetadata;
   imageAlt: string;
   minHeight?: string;
 }
@@ -13,7 +16,7 @@ const { label, title, subtitle, image, imageAlt, minHeight } = Astro.props;
 
 <section class="page-hero" style={minHeight ? `min-height: ${minHeight};` : undefined}>
   <div class="page-hero__bg">
-    <img src={image} alt={imageAlt} />
+    <Image src={image} alt={imageAlt} width={1920} quality={80} loading="eager" />
     <div class="page-hero__overlay"></div>
   </div>
   <div class="container">

@@ -625,6 +625,27 @@ p {
 	letter-spacing: 0.1em;
 }
 
+/* --- Team Member Cards (group photo layout) --- */
+.team-member-card {
+	padding: 1.25rem 1.5rem;
+	position: relative;
+}
+
+.team-member-card__role {
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--gold);
+	margin-bottom: 0.4rem;
+}
+
+.team-member-card__name {
+	font-family: var(--font-heading);
+	font-size: 1.15rem;
+	margin: 0;
+}
+
 /* --- Services Grid --- */
 .services-grid {
 	display: grid;
