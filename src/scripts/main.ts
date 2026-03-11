@@ -69,24 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Contact form handling ---
-  const contactForm = document.querySelector('.contact-form') as HTMLFormElement | null;
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = contactForm.querySelector('.btn') as HTMLElement | null;
-      if (!btn) return;
-      const originalText = btn.textContent;
-      btn.textContent = 'Message Sent!';
-      btn.style.backgroundColor = '#4CAF50';
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.backgroundColor = '';
-        contactForm.reset();
-      }, 3000);
-    });
-  }
-
   // --- Project gallery lightbox ---
   const galleryImages = document.querySelectorAll('.project-gallery img');
   const lightbox = document.querySelector('.lightbox');
