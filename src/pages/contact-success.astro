@@ -1,0 +1,30 @@
+---
+export const prerender = true;
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Message Sent — Gearheart Construction" description="Thank you for contacting Gearheart Construction.">
+  <Navbar slot="navbar" scrolled={true} />
+
+  <section class="section" style="min-height: 60vh; display: flex; align-items: center; text-align: center;">
+    <div class="container">
+      <div class="reveal" style="max-width: 600px; margin: 0 auto;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 64px; height: 64px; color: var(--color-accent, #b89a5a); margin-bottom: 1.5rem;">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <h1>Thank You</h1>
+        <p style="font-size: 1.125rem; opacity: 0.8; margin-top: 1rem;">
+          Your message has been received. We'll get back to you as soon as possible.
+        </p>
+        <a href="/" class="btn btn--primary" style="margin-top: 2rem;">
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
