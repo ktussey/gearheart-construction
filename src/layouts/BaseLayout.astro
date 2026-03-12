@@ -15,6 +15,7 @@ const isHome = Astro.url.pathname === '/';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,6 +24,18 @@ const isHome = Astro.url.pathname === '/';
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- TODO: Replace with your Google Search Console verification code -->
+    <meta name="google-site-verification" content="PASTE_VERIFICATION_CODE_HERE" />
   </head>
   <body>
     <slot name="navbar" />
