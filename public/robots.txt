@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gearheartconstruction.com/sitemap-index.xml
